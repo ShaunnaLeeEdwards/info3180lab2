@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+
+{% block css %} 
+<style>
+body  
+    {
+        width: 65%;
+        height: 65%;
+        margin: 70px 40px 70px 40px;
+        
+    }
+#pic
+    {
+        width: 400px;
+        height:350px;
+        margin: 30px;
+        padding-left:50px;
+        float:left;
+    }
+    
+    
+#profileInfo
+    {
+        border: solid 2px #bfbfbf;
+        float:right;
+        width:350px;
+        margin: 30px;
+        border-radius: 5px;
+    }
+    
+#name
+    {
+        padding: 20px 0px 30px 0px;
+        background:#cccccc;
+        border-bottom: solid 3px #bfbfbf;
+        height: 30px;
+    }
+    
+    
+.basic
+    {
+       
+        display:table-row;
+    }
+    
+#border
+    {
+        border-bottom: solid 2px #bfbfbf;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    
+</style>
+{% endblock%}
+
+
+
+
+
+{% block main %}
+
+<h1>Profile</h1><hr>
+
+
+<img id = "pic" src = "{{url_for('static', filename = 'img.jpg')}}" ></img>
+
+
+<div id = "profileInfo">
+     
+     <div id = "name">
+         &emsp; Name
+     </div><br/>
+     
+     <div id = "border">
+         <p> Today's Date: {{ date }} </p>
+     </div> <br/>
+     
+     
+         <div id = "border">
+             <p> <strong>  Username: </strong> LeeShanz </p> 
+             <p> <strong>  ID Number: </strong> 620099999 </p>
+             <p> <strong>  Age: </strong> 29 </p>
+             <p> <strong>  Gender: </strong> Female </p>
+         </div> <br/>
+     
+         <div> &emsp; Luctor Et Emergo!</div> <br/>
+         
+</div>
+
+
+
+    
+{% endblock %}
